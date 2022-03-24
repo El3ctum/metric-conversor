@@ -1,26 +1,27 @@
-let num1 = 8
-let num2 = 2
-let sumEl = document.getElementById("sum-el")
-let result = 0
-document.getElementById("num1-el").textContent = num1
-document.getElementById("num2-el").textContent = num2
+var feet = 3.2808399
+var gallon = 0.26417
+var pound = 2.20462262
+var result = 0
 
-function add() {
-    result = num1 + num2
-    sumEl.textContent = "Sum: " + result
+function meterToFeet(iptNumber) {
+    result = iptNumber * feet
+    document.getElementById("feet").innerHTML = (Math.round(result * 100) / 100).toFixed(2);
 }
 
-function subtract() {
-    result = num1 - num2
-    sumEl.textContent = "Sum: " + result
+function literToGallon(iptNumber) {
+    result = iptNumber * gallon
+    document.getElementById("gallon").innerHTML = (Math.round(result * 100) / 100).toFixed(2);
 }
 
-function divide() {
-    result = num1 / num2
-    sumEl.textContent = "Sum: " + result
+function kiloToPound(iptNumber) {
+    result = iptNumber * pound
+    document.getElementById("pound").innerHTML = (Math.round(result * 100) / 100).toFixed(2);
 }
 
-function multiply() {
-    result = num1 * num2
-    sumEl.textContent = "Sum: " + result
+function transformCalc() {
+    let iptNumber = document.getElementById("ipt-number").value
+    meterToFeet(iptNumber);
+    literToGallon(iptNumber);
+    kiloToPound(iptNumber);
 }
+

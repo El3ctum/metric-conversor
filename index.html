@@ -6,25 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="index.css">
-    <script type = "text/javascript" src="index.js"></script>
     <title>Metric/Imperial conversor</title>
 </head>
 <body>
     <div class="card">
         <div class="card-top">
             <h1>Metric/Imperial unit conversion</h1>
-            <input type="number" id="inpt-number" value="0" onchange="">
+            <label for="number"></label>
+            <input type="number" name="number" id="ipt-number" value="0" onchange="transformCalc()">
+            <script type = "text/javascript" src="index.js"></script>
         </div>
         <div class=" card-bottom">
             <h2>Length (Meter/Feet)</h2>
-            <p><span>0</span> meters = <span id="feet" onload="add()">0.000</span> feet | <span>0</span> feet = <span>0.000</span> meters</p>
+            <p><span>0</span> meters = <span id="feet">0.000</span> feet | <span>0</span> feet = <span>0.000</span> meters</p>
 
             <h2>Volume (Liters/Gallons)</h2>
-            <p>0 liters = 0.000 gallons | 0 gallons = 0.000 liters</p>
+            <p>0 liters = <span id="gallon">0.000</span> gallons | 0 gallons = 0.000 liters</p>
 
             <h2>Mass (Kilograms/Pounds)</h2>
-            <p>0 kilos = 0.000 pounds | 0 pounds = 0.000 kilos</p>
+            <p>0 kilos = <span id="pound">0.000</span> pounds | 0 pounds = 0.000 kilos</p>
         </div>
     </div>
+    <script type = "text/javascript" src="index.js"></script>
 </body>
 </html>
